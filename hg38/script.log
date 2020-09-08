@@ -1,0 +1,29 @@
+# [Annotation data commonly used]
+# This is a log file to tell the sepcific details to obtain the data.
+# Author:       Fulong Yu
+# Last update:  09072020
+
+
+# ---------------------------------------------------
+# CpG island
+# ---------------------------------------------------
+## CpG island annotation; 2kb away 
+# download from https://github.com/mehrankr/CpG-Annotator
+cd /share/pub/yufl/RB-mutation/0907-revision/elementAnno
+
+cat hg38_CpG-Island_Annotated.bed | grep -v Resort | grep -v Shelf| grep -v Shore | egrep "^[chr0-9XY$]" - | awk '$1 !~ "_"{ print $0}' |  grep -v chrM | sort -k1,1V -k2,2n -k3,3n > hg38_CGI.bed # 27949
+cat hg38_CpG-Island_Annotated.bed | grep Shore | egrep "^[chr0-9XY$]" - | awk '$1 !~ "_"{ print $0}' |  grep -v chrM | sort -k1,1V -k2,2n -k3,3n > hg38_CGI_Shore.bed # 55898
+cat hg38_CpG-Island_Annotated.bed | grep Shelf | egrep "^[chr0-9XY$]" - | awk '$1 !~ "_"{ print $0}' |  grep -v chrM | sort -k1,1V -k2,2n -k3,3n > hg38_CGI_Shelf.bed # 55898
+# ---------------------------------------------------
+# liftOver chain
+# ---------------------------------------------------
+## https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/
+## 下载hg38ToHg19.over.chain，解压
+
+
+
+
+
+
+
+
