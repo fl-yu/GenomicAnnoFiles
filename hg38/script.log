@@ -18,7 +18,7 @@ cat hg38_CpG-Island_Annotated.bed | grep Shelf | egrep "^[chr0-9XY$]" - | awk '$
 # liftOver chain
 # ---------------------------------------------------
 ## https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/
-## 下载hg38ToHg19.over.chain，解压
+## download hg38ToHg19.over.chain and uncompress it
 
 
 
